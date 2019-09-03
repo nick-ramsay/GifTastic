@@ -39,6 +39,7 @@ $(document).ready(function () {
                 $(cardDiv).append(cardBodyDiv);
                 $(".gifs").append(cardDiv);
                 */
+                
                 var gifContainerDiv = $('<div class="card" style="width: 18rem;">');
                 var imageDiv = $('<img class="card-img-top" alt=' + results.title + '>');
                 var cardBodyDiv = $('<div class="card-body">');
