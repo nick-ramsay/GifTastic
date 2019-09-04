@@ -1,5 +1,5 @@
 body {
-    background-color: lightslategray;
+    background-color: antiquewhite;
     font-family: 'Happy Monkey', cursive;
     font-weight: bold;
 }
@@ -9,4 +9,8 @@ body {
     font-weight: bold;
     float: left;
     margin-bottom: 5px;
+}
+
+.gifContainerDiv {
+    background-color: white;
 }
