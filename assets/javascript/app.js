@@ -44,7 +44,7 @@ $(document).ready(function () {
                 $(cardBodyDiv).attr("id", gifSearch + uniqueGifID + "cardBody");
 
                 var ratingDiv = $("<span>Rating: " + results[i].rating.toUpperCase() + "</span>");
-                var favouriteBtn = $("<button class='float-right favouriteBtn'>Fav</button>");
+                var favouriteBtn = $("<a class='float-right favouriteBtn'><img src='https://img.icons8.com/offices/30/000000/hearts.png'></a>");
                 $(favouriteBtn).attr("id", gifSearch + uniqueGifID + "button");
                 $(favouriteBtn).attr("data-gif-ID", gifSearch + uniqueGifID);
                 
@@ -76,7 +76,7 @@ $(document).ready(function () {
     $(document).on("click",".favouriteBtn", function addFavourite () {
         $("#" + $(this).attr("data-gif-ID")).appendTo(".favourites");
         $("#" + $(this).attr("id")).remove();
-        var removeBtn = $("<button class='float-right removeBtn'>Remove</button>");
+        var removeBtn = $("<a class='float-right removeBtn'><img src='https://img.icons8.com/material-outlined/24/000000/filled-trash.png'></a>");
         $(removeBtn).attr("data-gif-ID", $(this).attr("data-gif-ID"));
         $('#' + $(this).attr('data-gif-ID') + 'cardBody').append(removeBtn);
     }) //adds gif to favourites section

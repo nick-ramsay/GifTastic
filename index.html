@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Happy+Monkey&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Cairo&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="assets/javascript/app.js"></script>
@@ -17,21 +17,21 @@
 
 <body>
     <div class="container">
+        <header align="center">
+            <h1>GifTastic!</h1>
+        </header>
         <div class="row">
-            <div class="col-md-8 buttons">
-
-            </div>
-            <div class="col-md-3 offset-md-1 newButton">
+            <div class="col-md-8 buttons"></div>
+            <div class="col-md-3 offset-md-1 newButton" align="center">
                 <input type="text" id="newButtonSearch">
-                <button class="btn btn-success m-1" id="newButtonRun">Submit</button>
+                <button class="btn btn-success m-1" id="newButtonRun">Add Gif Button</button>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-8 gifs">
-            </div>
+        <div class="row" align="center">
+            <div class="col-md-8 gifs"></div>
             <div class="col-md-3 offset-md-1">
                 <h2>Favourite Gifs</h2>
-                <button class="btn btn-danger clearFavourites">Clear</button>
+                <button class="btn btn-danger clearFavourites">Clear All</button>
                 <div class="favourites">
                 </div>
             </div>

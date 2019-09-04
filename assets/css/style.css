@@ -1,16 +1,13 @@
 body {
-    background-color: antiquewhite;
-    font-family: 'Happy Monkey', cursive;
+    background-image: url("../images/dark-honeycomb.png");
+    color: white;
+    font-family: 'Cairo', sans-serif;
     font-weight: bold;
 }
 
-.gifs {
+.gifText {
     color: black;
     font-weight: bold;
     float: left;
     margin-bottom: 5px;
-}
-
-.gifContainerDiv {
-    background-color: white;
 }
