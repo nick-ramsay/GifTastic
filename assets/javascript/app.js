@@ -22,7 +22,6 @@ $(document).ready(function () {
         $(".gifs").empty();
         var gifSearch = $(this).attr("data-topic");
         var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=kVnhBzTc4hSQFqIP3Xg2CIuos2Lmj5ze&q=" + gifSearch + "&limit=10&offset=0&rating=G&lang=en";
-        console.log(queryURL);
 
         $.ajax({
             url: queryURL,
@@ -64,11 +63,9 @@ $(document).ready(function () {
         if (state === "play") {
             state = "pause";
             $(this).attr("src", $(this).attr("data-still-url"));
-            console.log("pause");
         } else {
             state = "play";
             $(this).attr("src", $(this).attr("data-play-url"));
-            console.log("play");
         }
 
     })
@@ -83,7 +80,6 @@ $(document).ready(function () {
 
     $(document).on("click",".removeBtn", function removeFavourite() {
         $('#' + $(this).attr('data-gif-ID')).remove();
-        console.log($('#' + $(this).attr('data-gif-ID')));
     })
 
     $(".clearFavourites").on("click", function clearFavourites() {
