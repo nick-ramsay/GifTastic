@@ -8,9 +8,13 @@
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/css?family=Cairo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cairo&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
     <script src="assets/javascript/app.js"></script>
     <title>GifTastic</title>
 </head>
@@ -28,12 +32,31 @@
             </div>
         </div>
         <div class="row" align="center">
-            <div class="col-md-8 gifs"></div>
-            <div class="col-md-3 offset-md-1">
-                <h2>Favourite Gifs</h2>
-                <button class="btn btn-danger clearFavourites">Clear All</button>
-                <div class="favourites">
+            <div class="col-md-12" align="center">
+                <div class="accordion" id="favAccordion">
+                    <div class="card" style="border:none;">
+                        <div id="favHeader">
+                            <button class="btn btn-warning btn-sm" type="button" data-toggle="collapse"
+                                data-target="#collapsedFavs" aria-expanded="true" aria-controls="collapsedFavs">
+                                Favourites
+                            </button>
+                        </div>
+
+                        <div id="collapsedFavs" class="collapse" aria-labelledby="favHeader"
+                            data-parent="#favAccordion">
+                            <button class="btn btn-danger btn-sm clearFavourites">Clear All</button>
+                            <div class="card-body favourites">
+                            </div>
+                        </div>
+                    </div>
                 </div>
+            </div>
+        </div>
+        <div class="row" align="center">
+            <div class="col-md-12">
+                <h3 id="currentDivHeader" align="center">Current Divs</h3>
+            </div>
+            <div class="col-md-12 gifs">
             </div>
         </div>
     </div>

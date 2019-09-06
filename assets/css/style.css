@@ -11,3 +11,11 @@ body {
     float: left;
     margin-bottom: 5px;
 }
+
+#favHeader {
+    background-image: url("../images/dark-honeycomb.png");
+}
+
+#collapsedFavs {
+    background-color: #ffc107;
+}
