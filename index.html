@@ -36,7 +36,7 @@
                 <div class="accordion" id="favAccordion">
                     <div class="card" style="border:none;">
                         <div id="favHeader">
-                            <button class="btn btn-warning btn-sm" type="button" data-toggle="collapse"
+                            <button class="btn btn-warning btn-sm m-1" type="button" data-toggle="collapse"
                                 data-target="#collapsedFavs" aria-expanded="true" aria-controls="collapsedFavs">
                                 Favourites
                             </button>
@@ -44,7 +44,9 @@
 
                         <div id="collapsedFavs" class="collapse" aria-labelledby="favHeader"
                             data-parent="#favAccordion">
-                            <button class="btn btn-danger btn-sm clearFavourites">Clear All</button>
+                            <div>
+                                <button class="btn btn-danger btn-sm m-1 clearFavourites">Clear All</button>
+                            </div>
                             <div class="card-body favourites">
                             </div>
                         </div>
@@ -52,13 +54,14 @@
                 </div>
             </div>
         </div>
-        <div class="row" align="center">
-            <div class="col-md-12">
-                <h3 id="currentDivHeader" align="center">Current Gifs</h3>
-            </div>
-            <div class="col-md-12 gifs">
-            </div>
+    </div>
+    <div class="row" align="center">
+        <div class="col-md-12">
+            <h3 id="currentGifHeader" align="center">Current Gifs</h3>
         </div>
+        <div class="col-md-12 gifs">
+        </div>
+    </div>
     </div>
 
 </body>

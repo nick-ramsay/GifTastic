@@ -19,6 +19,7 @@ $(document).ready(function () {
     uniqueGifID = 0;
 
     $(document).on("click", ".gifButton", function () {
+        $("#currentGifHeader").text($(this).attr("data-topic"));
         $(".gifs").empty();
         var gifSearch = $(this).attr("data-topic");
         var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=kVnhBzTc4hSQFqIP3Xg2CIuos2Lmj5ze&q=" + gifSearch + "&limit=10&offset=0&rating=G&lang=en";
@@ -30,10 +31,10 @@ $(document).ready(function () {
             $(".gifs").empty();
             var results = response.data;
             for (var i = 0; i < results.length; i++) {
-                uniqueGifID ++;
+                uniqueGifID++;
                 var gifContainerDiv = $('<div class="card float-left" style="width: 18rem;">');
                 $(gifContainerDiv).attr("id", gifSearch + uniqueGifID);
-                
+
                 var imageDiv = $('<img class="card-img-top gifImage" alt=' + results.title + '>');
                 $(imageDiv).attr("data-still-url", results[i].images.fixed_height_still.url);
                 $(imageDiv).attr("data-play-url", results[i].images.fixed_height.url);
@@ -46,7 +47,7 @@ $(document).ready(function () {
                 var favouriteBtn = $("<a class='float-right favouriteBtn'><img src='https://img.icons8.com/offices/30/000000/hearts.png'></a>");
                 $(favouriteBtn).attr("id", gifSearch + uniqueGifID + "button");
                 $(favouriteBtn).attr("data-gif-ID", gifSearch + uniqueGifID);
-                
+
                 $(cardBodyDiv).append(ratingDiv);
                 $(cardBodyDiv).append(favouriteBtn);
                 $(gifContainerDiv).append(imageDiv);
@@ -70,15 +71,15 @@ $(document).ready(function () {
 
     })
 
-    $(document).on("click",".favouriteBtn", function addFavourite () {
-        $("#" + $(this).attr("data-gif-ID")).appendTo(".favourites");
+    $(document).on("click", ".favouriteBtn", function addFavourite() {
+        $("#" + $(this).attr("data-gif-ID")).prependTo(".favourites");
         $("#" + $(this).attr("id")).remove();
         var removeBtn = $("<a class='float-right removeBtn'><img src='https://img.icons8.com/material-outlined/24/000000/filled-trash.png'></a>");
         $(removeBtn).attr("data-gif-ID", $(this).attr("data-gif-ID"));
         $('#' + $(this).attr('data-gif-ID') + 'cardBody').append(removeBtn);
     }) //adds gif to favourites section
 
-    $(document).on("click",".removeBtn", function removeFavourite() {
+    $(document).on("click", ".removeBtn", function removeFavourite() {
         $('#' + $(this).attr('data-gif-ID')).remove();
     })
 
